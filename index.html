@@ -80,7 +80,6 @@
       clear: both;
   
     }
-  
     /*input, select {
       width: 100%;
       padding: 15px; 
@@ -242,6 +241,9 @@
       
       <a class="btn btn-dark btn-xl js-scroll-trigger my-auto" href="#donationForm">Donate Now</a>
     </div>
+    <div class="firstbutton">
+      <a class="btn btn-dark btn-xl js-scroll-trigger my-auto" href="#donationForm">Donate Now</a>
+    </div>
   </div>
   <!-- About -->
   <section class="content-section bg-light" id="about">
@@ -254,7 +256,7 @@
             It is only through genuine learning that one can touch the lives of people, give it perspective and draw them towards a higher purpose. 
             <br>Gyan Seva encompasses all of this. 
             More than anything else, one becomes the Messenger of the Lord.</p>
-          <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">Gita Jayanti Month</a>
+          <a class="btn btn-dark btn-xl js-scroll-trigger" href="#donationForm">Donate Now</a>
         </div>
       </div>
     </div>
@@ -684,6 +686,9 @@
   <script src="js/stylish-portfolio.min.js"></script>
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
   <script>
+    var refno = new Date().getTime();
+  // alert(refno);
+  console.log(refno);
     function extenddonation(){
       var inputamount = document.getElementById("extendeddonation").value;
     document.getElementById("extendamount").innerHTML= inputamount;
@@ -754,11 +759,15 @@
       jQuery("#extendamount").focus();
     } else if (totalamt == 0) {
       alert('Total donation amount cannot be 0');
+      jQuery("#totoalamount").focus();
     } else if (pincode== ''|| pincode.toString().length != 6){
       alert('Please Enter valid Pincode no.');
-    } else if(donationamount == 0){
-      alert('Please select donation option')
-    } else {
+      jQuery("#pincode").focus();
+    } 
+    // else if(donationamount == 0){
+    //   alert('Please select donation option')
+    // }
+     else {
       data = totalamt + '|' + donorname + '|' + mobile_no + '|' + email + '|' + Adres + '|' + pincode + '|' + donationamount + '|' + shipamount
        + '|' + extendedamount + '|' + refno;
       getOrderId(data);
@@ -789,11 +798,11 @@
         console.log("hare Krishna");
         console.log(orderid);
         var options = {
-          "key": "rzp_live_fJPzqjzCOPtIlJ", // Enter the Key ID generated from the Dashboard    
+          "key": "rzp_test_BFRmbwRrztYcvF", // Enter the Key ID generated from the Dashboard    
           "amount": totalamt * 100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise    
           "currency": "INR",
           "name": "ISKCON Newtown",
-          "description": "Go Seva",
+          "description": "Gita Jayanti",
           "image": "https://www.janmastami.iskconnewtown.com/wp-content/uploads/2020/07/logifinal.png",
           "order_id": response, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1    
           "callback_url": "https://www.backend.iskconnewtown.com/gitajayanti.php",
