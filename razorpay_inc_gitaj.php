@@ -2,8 +2,8 @@
 // include 'connect.php';
 include('razorpay-php/Razorpay.php');
 use Razorpay\Api\Api;
-$keyId= 'rzp_test_BFRmbwRrztYcvF';
-$keySecret = '2WF0BSO4EX052kjUZrlsBR5L';
+$keyId= 'rzp_live_BkG5TkB4pU5rZa';
+$keySecret = 'ILJe6DdlYIoJl1H8bwKgJbt5';
 $api = new Api($keyId,$keySecret);
 
 // $registration_amount = 10000;
