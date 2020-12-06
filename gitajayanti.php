@@ -3,7 +3,7 @@ header("Access-Control-Allow-Origin: *");
 error_reporting(0);
 session_start();
 include('connect.php');
-require("razorpay_inc_gitajt.php");
+require("razorpay_inc_gitaj.php");
 
 date_default_timezone_set('Asia/Kolkata');
 
@@ -84,12 +84,12 @@ if(isset($_POST['razorpay_payment_id']) && isset($_POST['razorpay_order_id']) &&
    if($refno && $n1) {
     confirmregistration($arr2); 
    } else {
-      header('Location: https://www.google.com');
+      header('Location: https://www.iskconnewtown.com/paymentfailed');
    }
 }
 
 function confirmregistration($arr2){
-    header('Location: https://www.iskconnewtown.com');
+    header('Location: https://www.iskconnewtown.com/thankg');
     
     console.log("one confirmregistration");
     $to = $arr2['email'];
