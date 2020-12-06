@@ -65,7 +65,6 @@ if(isset($_POST['razorpay_payment_id']) && isset($_POST['razorpay_order_id']) &&
             $sql1 = "UPDATE `gitajayanti` SET `paymentsignature`='" . $razorpay_signature . "', `paymentid`='" . $razorpay_payment_id . "' WHERE `orderid` ='" . $razorpay_order_id . "'";
             $res1 = $con->query($sql1);
             $n1 = $con->affected_rows;
-            $n1 = true;
             console.log("radhe");
 /*
             $payments = $api->order->fetch($razorpay_order_id)->payments();
@@ -89,7 +88,7 @@ if(isset($_POST['razorpay_payment_id']) && isset($_POST['razorpay_order_id']) &&
 }
 
 function confirmregistration($arr2){
-    header('Location: https://www.iskconnewtown.com/thankg');
+    header('Location: https://www.iskconnewtown.com/thankyou');
     
     console.log("one confirmregistration");
     $to = $arr2['email'];
