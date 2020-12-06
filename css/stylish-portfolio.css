@@ -24,9 +24,8 @@ body {
 }
 
 .content-section1 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  background-color: WHITE;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .content-section-heading h2 {
@@ -387,13 +386,9 @@ a:hover, a:focus, a:active {
   color: #ecb807 !important;
 }
 
-#shareGita{
-  transition: 0.3s;
-  /* background-color:black; */
-  border-radius: 10px;
+.carousel-inner{
+  /* height: 110vh; */
 }
-
-#shareGita:hover{
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
-  background-color:black;
+.carousel-inner img {
+  object-fit: cover;
 }
