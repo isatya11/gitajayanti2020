@@ -392,3 +392,24 @@ a:hover, a:focus, a:active {
 .carousel-inner img {
   object-fit: cover;
 }
+
+hr{
+  display: block;
+  unicode-bidi: isolate;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 1px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-top-color: rgb(254, 208, 61);
+  border-right-color: rgb(254, 208, 61);
+  border-bottom-color: rgb(254, 208, 61);
+  border-left-color: rgb(254, 208, 61);
+  background-color: rgb(254, 208, 61);
+}
