@@ -416,7 +416,18 @@ hr{
 
   @media only screen and (min-width: 768px) {
     /* For mobile phones: */
-    .sliderImage {
-      height: 100vh !important;
+    .carousel-inner img{
+      height: 100vh!important;
     }
-}
+  }
+
+#topHeading{
+  display: block;
+  color:white;
+  /* background-color:white; */
+  height:fit-content  ;
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:3;
+  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);}
