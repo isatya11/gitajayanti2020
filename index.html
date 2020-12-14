@@ -720,6 +720,9 @@
         document.getElementById("shipamount").innerHTML = "Shipping-charge: "+shipamount
         total = total + parseInt(shipamount)
       }
+      else if(document.getElementById("ship").value == 2 || document.getElementById("ship").value == 0){
+        document.getElementById("shipamount").innerHTML = ''
+      }
     console.log(parseInt(total))
     //alert(total);
     document.getElementById("totalamount").innerHTML = total;
@@ -793,7 +796,7 @@
         console.log("hare Krishna");
         console.log(orderid);
         var options = {
-          "key": "rzp_test_BFRmbwRrztYcvF", // Enter the Key ID generated from the Dashboard    
+          "key": "rzp_live_BkG5TkB4pU5rZa", // Enter the Key ID generated from the Dashboard    
           "amount": totalamt * 100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise    
           "currency": "INR",
           "name": "ISKCON Newtown",
